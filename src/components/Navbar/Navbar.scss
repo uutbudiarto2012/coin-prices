@@ -1,0 +1,101 @@
+.navbar{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    .menu-toggle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            height: 35px;
+            width: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all ease-in-out .3s;
+            border-radius: 4px;
+            background-color: #e5d3ff;
+            &:hover{
+                border-radius: 50%;
+            }
+        }
+    }
+    .part{
+        flex: 1;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+    }
+    
+    .right{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.side-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color:#fdf9ff;
+    width: 360px;
+    transform: translateX(-360px);
+    transition: all ease-in-out .3s;
+    z-index: 10;
+    &.open{
+        transform: translateX(0);
+    }
+
+    .header{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding-left:10px;
+        height: 60px;
+    }
+    .body{
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        box-sizing: border-box;
+        .menus{
+            padding-top: 20px;
+
+            .menu-item{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                height: 40px;
+                cursor: pointer;
+                padding: 5px 10px;
+                font-weight: 600;
+                margin-bottom: 3px;
+                .icon{
+                    margin-right: 10px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+                transition: all ease-in-out .1s;
+                color: #632cb0;
+                &:hover{
+                    background-color: #e5d3ff;
+                    border-right: 3px solid #bf91ff;
+                }
+                &.active{
+                    background-color: #e5d3ff;
+                    border-right: 3px solid #bf91ff;
+                }
+            }
+        }
+    }
+}

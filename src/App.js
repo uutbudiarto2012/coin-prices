@@ -1,16 +1,16 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Player from './pages/Player';
-import './App.css';
+import About from "./pages/About";
+import "./App.css";
 
 const App = () => {
-  return(
+  return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/player" element={<Player />} />
+      <Route path="/about" element={<About />} />
     </Routes>
-  )
+  );
 };
 
 export default App;
